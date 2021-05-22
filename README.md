@@ -1,15 +1,16 @@
 # SOPKATHON-Web
 
-### 🌟 우리 서비스 이름: Youniverse
-
-`로고`
+### 🌟 Youniverse
+<img src="https://user-images.githubusercontent.com/71601985/119239653-80bf5780-bb85-11eb-800f-d33288394cbe.png" width=25%>
 
 <br/>
 
 
 ### ✨ `Youniverse` 는 이런 서비스입니다!
 
-나와 너의 감정 공유의 시간을 행성에 기록하다!  
+나와 너의 감정 공유의 시간을 행성에 기록하다!
+
+<br/>
 
 나만의 우주를 만들어보세요.
 
@@ -21,9 +22,20 @@
 
 ### 🪜 사용한 기술
 
-- 언어 뭐 썼는지, 패키지 뭐 썼는지
-- 사용한 모듈  
 
+<img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=flat" height=40>&nbsp;&nbsp;<img src="https://img.shields.io/badge/-CSS3-2573B6?logo=css3&logoColor=white&style=flat" height=40>&nbsp;&nbsp;<img src="https://img.shields.io/badge/-HTML5-ED4133?logo=html5&logoColor=white&style=flat" height=40>&nbsp;&nbsp;<img src="https://img.shields.io/badge/-JavaScript-E5D145?logo=javascript&logoColor=white&style=flat" height=40>
+
+```json
+"axios": "^0.21.1",
+"eslint-config-airbnb": "^18.2.1",
+"react": "^17.0.2",
+"react-dom": "^17.0.2",
+"react-router-dom": "^5.2.0",
+"react-scripts": "4.0.3",
+"styled-components": "^5.3.0",
+"styled-reset": "^4.3.4",
+"web-vitals": "^1.0.1"
+```
 <br/>
 
 ### 🗂 프로젝트 구조 
@@ -33,25 +45,27 @@
 ⎜  ⎿ index.html
 ⎣ 📁 src
    ⎿ 📁 assets
-      ⎿ 📁 fonts
-      ⎿ 📁 icons
-      ⎿ 📁 images
-      ⎿ index.js
+   ⎹  ⎿ 📁 fonts
+   ⎹  ⎿ 📁 icons
+   ⎹  ⎿ 📁 images
+   ⎹  ⎿ index.js
    ⎿ 📁 components
-      ⎿ 📁 common
-      ⎿ index.js
+   ⎹  ⎿ 📁 common
+   ⎹  ⎮  ⎿ Header.js 
+   ⎹  ⎮  ⎿ Planet.js  
+   ⎹  ⎿ index.js
    ⎿ 📁 libs
-      ⎿ api.js
+   ⎹  ⎿ api.js
    ⎿ 📁 pages
-      ⎿ Emotion.js
-      ⎿ Login.js
-      ⎿ Main.js
-      ⎿ Read.js
-      ⎿ Write.js
-      ⎿ index.js
+   ⎹  ⎿ Emotion.js
+   ⎹  ⎿ Login.js
+   ⎹  ⎿ Main.js
+   ⎹  ⎿ Read.js
+   ⎹  ⎿ Write.js
+   ⎹  ⎿ index.js
    ⎿ 📁 styles
-      ⎿ GlobalStyle.js
-      ⎿ theme.js
+   ⎹  ⎿ GlobalStyle.js
+   ⎹  ⎿ theme.js
    ⎿ APP.js
    ⎿ index.js
 ```
@@ -66,7 +80,7 @@
 
 - Main 브랜치에 릴리즈 버전 관리
 - Develop 브랜치에 개발 중인 버전 관리
-- Feat/[기능 이름] 브랜치에서 기능 개발  
+- Feat/[기능 이름] 브랜치에서 기능 구현  
 
 <br/>
 
@@ -76,7 +90,7 @@
 |:---:|:---:|:---:|:---:|
 | 이름 |김의진|박나희|이다은|
 | 맡은 뷰 |행성 페이지|로그인, 행성계 페이지|별 만들기, 별 보기 페이지|
-| 맡은 역할 |열정 브레인|서버 연결 선생님|리드(미) 개발자|
+| 맡은 역할 |초기 세팅|서버 연결 선생님|리드(미) 개발자|
   
 <br/>
 
