@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/common/Header';
 import { Login, Main, Emotion, Read, Write } from './pages';
 import getApi from '../src/lib/getApi';
 import { postAPI } from './lib/postApi';
@@ -27,23 +28,71 @@ function App() {
   console.log(userId);
   return (
     <>
+      <Header />
       <Router>
         <Switch>
           <Route
             exact
             path="/"
-            render={() => <Login setUserId={setUserId} />}
+            render={() => <Login user={user} setUser={setUser} />}
           />
-          <Route path="/:id" component={Main} />
           <Route
-            path="/:id/happy"
-            component={() => <Emotion emotion="happy" />}
+            exact
+            path="/:id"
+            render={() => <Main user={user} setUser={setUser} />}
           />
-          <Route path="/:id/sad" component={() => <Emotion emotion="sad" />} />
-          <Route path="/:id/happy/write" component={Write} />
-          <Route path="/:id/sad/write" component={Write} />
-          <Route path="/:id/happy/read" component={Read} />
-          <Route path="/:id/sad/read" component={Read} />
+          <Route
+            exact
+            path="/:id/happy"
+            component={() => (
+              <Emotion
+                user={user}
+                setEmotion={setEmotion}
+                src={src}
+                setSrc={setSrc}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/:id/sad"
+            component={() => (
+              <Emotion
+                user={user}
+                setEmotion={setEmotion}
+                src={src}
+                setSrc={setSrc}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/:id/touching"
+            component={() => (
+              <Emotion
+                user={user}
+                setEmotion={setEmotion}
+                src={src}
+                setSrc={setSrc}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/:id/sorry"
+            component={() => (
+              <Emotion
+                user={user}
+                setEmotion={setEmotion}
+                src={src}
+                setSrc={setSrc}
+              />
+            )}
+          />
+          <Route exact path="/:id/happy/write" component={Write} />
+          <Route exact path="/:id/sad/write" component={Write} />
+          <Route exact path="/:id/happy/read" component={Read} />
+          <Route exact path="/:id/sad/read" component={Read} />
           <Route path="/">404 not Found</Route>
         </Switch>
       </Router>
