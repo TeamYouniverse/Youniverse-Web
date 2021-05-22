@@ -56,7 +56,7 @@ const LoginWrap = styled.div`
   align-items: center;
   justify-content: center;
   .title {
-    margin-top: 5.4rem;
+    margin-top: 17.5rem;
     margin-bottom: 8.6rem;
     font-family: Noto Sans CJK KR;
     font-size: 2rem;
@@ -109,7 +109,7 @@ const LoginWrap = styled.div`
     border: 0.1rem solid #ffffff;
     box-sizing: border-box;
     border-radius: 3.05rem;
-    font-family: Roboto;
+    font-family: Noto Sans CJK KR;
     font-style: normal;
     font-weight: normal;
     font-size: 2rem;
