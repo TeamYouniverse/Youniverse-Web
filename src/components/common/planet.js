@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 const Planet = ({ size, src, name }) => {
   return (
-    <PlanetWrap src={src} size={size}>
-      {name}
+    <PlanetWrap>
+      <PlanetEach src={src} size={size}></PlanetEach>
+      <NameWrap>{name}</NameWrap>
     </PlanetWrap>
   );
 };
@@ -12,22 +13,42 @@ const Planet = ({ size, src, name }) => {
 export default Planet;
 
 const PlanetWrap = styled.div`
-  font-size: 3.5rem;
-  background-image: url(${(props) => props.src});
-  background-size: 100% 100%;
-  width: ${(props) =>
-    props.size === 'large'
-      ? '30rem'
-      : props.size === 'small'
-      ? '10rem'
-      : '6rem'};
-  height: ${(props) =>
-    props.size === 'large'
-      ? '30rem'
-      : props.size === 'small'
-      ? '10rem'
-      : '6rem'};
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+const PlanetEach = styled.div`
+  /* background-color: black; */
+  border-radius: 50%;
+  background-image: url(${(props) => props.src});
+  /* background-size: 100% 100%; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: ${(props) =>
+    props.size === 'large'
+      ? '40rem'
+      : props.size === 'happy'
+      ? '21rem'
+      : props.size === 'touching'
+      ? '16.9rem'
+      : props.size === 'sad'
+      ? '13rem'
+      : '12.4rem'};
+  height: ${(props) =>
+    props.size === 'large'
+      ? '40rem'
+      : props.size === 'happy'
+      ? '21rem'
+      : props.size === 'touching'
+      ? '16.9rem'
+      : props.size === 'sad'
+      ? '13rem'
+      : '12.4rem'};
+`;
+
+const NameWrap = styled.div`
+  margin-top: 1.5rem;
+  font-size: 2.2rem;
 `;
