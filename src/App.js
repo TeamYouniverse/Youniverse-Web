@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/common/Header';
 import { Login, Main, Emotion, Read, Write } from './pages';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   console.log(userId);
   return (
     <>
+      <Header />
       <Router>
         <Switch>
           <Route

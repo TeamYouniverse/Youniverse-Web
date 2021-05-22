@@ -15,6 +15,7 @@ const Login = ({ setUserId }) => {
   };
   return (
     <LoginWrap>
+      <Emotion />
       <div>나와 너의 감정 공유의 시간을 행성에 기록하다, Youniverse</div>
       <p>나만의 우주를 만들어보세요. 행성이 감정을 담아둘거예요.</p>
       <p>
