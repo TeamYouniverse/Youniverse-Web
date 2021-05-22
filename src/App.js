@@ -16,16 +16,21 @@ function App() {
             path="/"
             render={() => <Login setUserId={setUserId} />}
           />
-          <Route path="/:id" component={Main} />
+          <Route exact path="/:id" component={Main} />
           <Route
+            exact
             path="/:id/happy"
             component={() => <Emotion emotion="happy" />}
           />
-          <Route path="/:id/sad" component={() => <Emotion emotion="sad" />} />
-          <Route path="/:id/happy/write" component={Write} />
-          <Route path="/:id/sad/write" component={Write} />
-          <Route path="/:id/happy/read" component={Read} />
-          <Route path="/:id/sad/read" component={Read} />
+          <Route
+            exact
+            path="/:id/sad"
+            component={() => <Emotion emotion="sad" />}
+          />
+          <Route exact path="/:id/happy/write" component={Write} />
+          <Route exact path="/:id/sad/write" component={Write} />
+          <Route exact path="/:id/happy/read" component={Read} />
+          <Route exact path="/:id/sad/read" component={Read} />
           <Route path="/">404 not Found</Route>
         </Switch>
       </Router>
