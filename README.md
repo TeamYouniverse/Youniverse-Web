@@ -98,22 +98,23 @@
 
 ### ☄️ 페이지 소개  
 
+
 **Landingpage**  
 \- 사용자가 처음 접속하면 자신만의 우주를 만들기 위해 이름을 입력합니다.  
-<img src="" width=70%>
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/521a1b54-c919-495f-8542-4ac602fa2102/May-23-2021_07-25-34.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210522T224538Z&X-Amz-Expires=86400&X-Amz-Signature=7a72da9dcf895db507e9d6862809ead8ca57be866d175dbf7687ec8a2fb6e3c4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22May-23-2021_07-25-34.gif%22" width=70%>
 
 **User_space**  
 \- 사용자의 우주가 담긴 페이지입니다. 사용자는 자신의 우주 링크를 주변 사람들에게 공유해 자신과의 기억을 롤링페이퍼처럼 적어달라고 할 수 있습니다.  
-<img src="" width=70%>
+<img src="https://user-images.githubusercontent.com/71601985/119242573-e1f12600-bb99-11eb-9e19-d504e5821509.png" width=70%>
 
 **User_space_emotion**  
-\- 감정 행성이 담긴 페이지입니다. 주변 사람들이 남긴 감정이 별이 되었습니다. 마우스를 올리면 제목을, 클릭하면 자세한 내용을 볼 수 있습니다.  
-<img src="" width=70%>
+\- 감정 행성이 담긴 페이지입니다. 주변 사람들이 남긴 감정이 별이 되었습니다. 별에 마우스를 올리면 제목을, 클릭하면 자세한 내용을 볼 수 있습니다.  
+<img src="https://user-images.githubusercontent.com/71601985/119242599-2381d100-bb9a-11eb-8495-d11f1e7f26b3.png" width=70%>
 
 **Write_emotion**  
-\- 새로운 별을 만드는 페이지입니다. 해당 감정에 맞는 기억을 기록할 수 있습니다.  
-<img src="" width=70%>
+\- 새로운 별을 만드는 페이지입니다. 선택한 감정에 맞는 기억을 기록할 수 있습니다.  
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/53b3866e-232b-4f6a-a86f-8a5886895c38/May-23-2021_07-57-07.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210522T225820Z&X-Amz-Expires=86400&X-Amz-Signature=82c0d949ddb278092a97de7621d9c5dd2d029ab187b70cd01385557c1224f0a9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22May-23-2021_07-57-07.gif%22" width=70%>  
 
 **Check_emotion**  
 \- 별의 상세한 내용을 확인할 수 있는 페이지입니다. 누군가가 적고 간 감정 기억을 읽을 수 있습니다.  
-<img src="" width=70%>
+<img src="https://user-images.githubusercontent.com/71601985/119242579-eddce800-bb99-11eb-81a5-0fc45b19bea6.png" width=70%>
