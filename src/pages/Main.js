@@ -64,7 +64,7 @@ const MainWrap = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-top: 5.5rem;
+      margin-top: 10rem;
       &--planet {
         position: relative;
       }
@@ -75,13 +75,13 @@ const MainWrap = styled.div`
         font-style: normal;
         font-weight: 500;
         font-size: 3rem;
-        color: black;
+        color: #ffffff;
       }
       &--content {
         margin-top: 4.1rem;
         font-size: 2rem;
         text-align: center;
-        color: black;
+        color: #ffffff;
       }
     }
     &--happy {
