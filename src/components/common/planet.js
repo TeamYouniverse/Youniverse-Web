@@ -19,13 +19,8 @@ const PlanetWrap = styled.div`
   align-items: center;
 `;
 const PlanetEach = styled.div`
-  /* background-color: black; */
   border-radius: 50%;
   background-image: url(${(props) => props.src});
-  /* background-size: 100% 100%; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   width: ${(props) =>
     props.size === 'large'
       ? '40rem'
@@ -51,4 +46,5 @@ const PlanetEach = styled.div`
 const NameWrap = styled.div`
   margin-top: 1.5rem;
   font-size: 2.2rem;
+  color: #ffffff;
 `;
