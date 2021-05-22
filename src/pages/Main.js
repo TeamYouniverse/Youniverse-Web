@@ -6,6 +6,7 @@ import Sad from '../assets/images/sad.svg';
 import Touching from '../assets/images/touching.svg';
 import Sorry from '../assets/images/sorry.svg';
 import mainPlanet from '../assets/images/Planet.svg';
+import GlobalFonts from '../assets/fonts/font';
 
 const MainPage = () => {
   // 서버로부터 받을 데이터 넣을 것이지만 임의로 넣어둠
@@ -19,6 +20,7 @@ const MainPage = () => {
   };
   return (
     <MainWrap>
+      <GlobalFonts />
       <div className="planet">
         <div className="planet--main">
           <div className="planet--main--userName">{name}</div>
@@ -54,6 +56,7 @@ const MainPage = () => {
 export default MainPage;
 
 const MainWrap = styled.div`
+  font-family: Noto Sans CJK KR;
   .planet {
     display: flex;
     flex-direction: column;
