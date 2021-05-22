@@ -94,8 +94,9 @@
 
 ### 🎈 시연 영상
   
-https://user-images.githubusercontent.com/71601985/119243623-6bf1bc80-bba3-11eb-8d95-6fb5ad99bcf0.mov
+https://user-images.githubusercontent.com/71601985/119243623-6bf1bc80-bba3-11eb-8d95-6fb5ad99bcf0.mov  
 
+<br/>
 
 ### ☄️ 페이지 소개  
 
