@@ -19,8 +19,10 @@ const PlanetWrap = styled.div`
   align-items: center;
 `;
 const PlanetEach = styled.div`
+  cursor: pointer;
   border-radius: 50%;
   background-image: url(${(props) => props.src});
+  background-size: 100% 100%;
   width: ${(props) =>
     props.size === 'large'
       ? '40rem'

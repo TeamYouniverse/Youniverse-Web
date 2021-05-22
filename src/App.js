@@ -4,8 +4,22 @@ import Header from './components/common/Header';
 import { Login, Main, Emotion, Read, Write } from './pages';
 
 function App() {
-  const [userId, setUserId] = useState();
-  console.log(userId);
+  const data = {
+    status: 200,
+    data: {
+      id: 1,
+      username: '',
+      postList: {
+        happy: [],
+        touching: [],
+        sorry: [],
+        sad: [],
+      },
+    },
+  };
+  const [user, setUser] = useState(data);
+  const [emotion, setEmotion] = useState();
+  const [src, setSrc] = useState();
   return (
     <>
       <Header />
@@ -14,18 +28,60 @@ function App() {
           <Route
             exact
             path="/"
-            render={() => <Login setUserId={setUserId} />}
+            render={() => <Login user={user} setUser={setUser} />}
           />
-          <Route exact path="/:id" component={Main} />
+          <Route
+            exact
+            path="/:id"
+            render={() => <Main user={user} setUser={setUser} />}
+          />
           <Route
             exact
             path="/:id/happy"
-            component={() => <Emotion emotion="happy" />}
+            component={() => (
+              <Emotion
+                user={user}
+                setEmotion={setEmotion}
+                src={src}
+                setSrc={setSrc}
+              />
+            )}
           />
           <Route
             exact
             path="/:id/sad"
-            component={() => <Emotion emotion="sad" />}
+            component={() => (
+              <Emotion
+                user={user}
+                setEmotion={setEmotion}
+                src={src}
+                setSrc={setSrc}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/:id/touching"
+            component={() => (
+              <Emotion
+                user={user}
+                setEmotion={setEmotion}
+                src={src}
+                setSrc={setSrc}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/:id/sorry"
+            component={() => (
+              <Emotion
+                user={user}
+                setEmotion={setEmotion}
+                src={src}
+                setSrc={setSrc}
+              />
+            )}
           />
           <Route exact path="/:id/happy/write" component={Write} />
           <Route exact path="/:id/sad/write" component={Write} />

@@ -6,17 +6,47 @@ import Sad from '../assets/images/sad.svg';
 import Touching from '../assets/images/touching.svg';
 import Sorry from '../assets/images/sorry.svg';
 import mainPlanet from '../assets/images/Planet.svg';
+import { useHistory } from 'react-router';
 import GlobalFonts from '../assets/fonts/font';
 
-const MainPage = () => {
+const MainPage = (user, setEmotion, setSrc) => {
+  console.log(user.user.data.username);
+
   // 서버로부터 받을 데이터 넣을 것이지만 임의로 넣어둠
-  const name = '나히';
+  const name = user.user.data.username;
 
   const emotion = {
     happy: '행복',
     sad: '서운',
     sorry: '미안',
     touching: '감동',
+  };
+  const history = useHistory();
+  // console.log(event.target.getAttribute('src'));
+
+  const handleHappy = (event) => {
+    history.push({
+      pathname: '/1/happy',
+      state: { name },
+    });
+  };
+  const handleSad = (event) => {
+    history.push({
+      pathname: '/1/sad',
+      state: { name },
+    });
+  };
+  const handleTouching = (event) => {
+    history.push({
+      pathname: '/1/touching',
+      state: { name },
+    });
+  };
+  const handleSorry = (event) => {
+    history.push({
+      pathname: '/1/sorry',
+      state: { name },
+    });
   };
   return (
     <MainWrap>
@@ -26,16 +56,16 @@ const MainPage = () => {
           <div className="planet--main--userName">{name}</div>
           <div className="planet--main--planet">
             <Planet size={'large'} src={mainPlanet}></Planet>
-            <div className="planet--happy">
+            <div className="planet--happy" onClick={handleHappy}>
               <Planet size={'happy'} src={Happy} name={emotion.happy}></Planet>
             </div>
-            <div className="planet--sad">
+            <div className="planet--sad" onClick={handleSad}>
               <Planet size={'sad'} src={Sad} name={emotion.sad}></Planet>
             </div>
-            <div className="planet--sorry">
+            <div className="planet--sorry" onClick={handleSorry}>
               <Planet size={'small'} src={Sorry} name={emotion.sorry}></Planet>
             </div>
-            <div className="planet--touching">
+            <div className="planet--touching" onClick={handleTouching}>
               <Planet
                 size={'touching'}
                 src={Touching}

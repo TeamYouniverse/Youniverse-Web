@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import GlobalFonts from '../assets/fonts/font';
 
 // App.js에서 setUserId 값을 받아와서 input에서 받아온 값으로 그 값 저장
-const Login = ({ setUserId }) => {
+const Login = ({ user, setUser }) => {
   const history = useHistory();
   const [userName, setUserName] = useState('');
   const ChangeHandler = (event) => {
     console.log('뭐가입력됏닝', event.target.value);
     setUserName(event.target.value);
   };
+  const inputRef = useRef();
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    setUserId(userName);
+    console.log(inputRef.current.value);
+    setUser({
+      ...user,
+      data: { ...user.data, username: inputRef.current.value },
+    });
     history.push('/1');
   };
   return (
@@ -35,6 +40,7 @@ const Login = ({ setUserId }) => {
           type="text"
           value={userName}
           onChange={ChangeHandler}
+          ref={inputRef}
         ></input>
       </form>
       <div className="button" onClick={(event) => onSubmitHandler(event)}>
