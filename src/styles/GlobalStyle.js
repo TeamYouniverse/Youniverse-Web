@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import { Background } from '../assets';
 
 export default createGlobalStyle`
     ${reset};
@@ -7,6 +8,9 @@ export default createGlobalStyle`
     body{
         font-size: 10px;
         font-family: 'Spoqa Han Sans Neo','sans-serif';
+    }
+    body {
+        background-image:url(${Background});
     }
 
     * {
