@@ -1,25 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/common/Header';
 import { Login, Main, Emotion, Read, Write } from './pages';
+import getApi from '../src/lib/getApi';
+import { postAPI } from './lib/postApi';
 
 function App() {
-  const data = {
-    status: 200,
-    data: {
-      id: 1,
-      username: '',
-      postList: {
-        happy: [],
-        touching: [],
-        sorry: [],
-        sad: [],
-      },
-    },
+  const [userId, setUserId] = useState();
+  const [paramId, setParamId] = useState();
+  const [userData, setUserData] = useState({
+    status: 'idle',
+    data: null,
+  });
+
+  //post로 받은 paramId값을 보내서 userData 받음
+  const getData = async (paramId) => {
+    try {
+      const data = await getApi(paramId);
+      if (data === null) throw Error;
+      setUserData({ status: 'resolved', data: data });
+    } catch (e) {
+      setUserData({ status: 'rejected', data: null });
+      console.log(e);
+    }
   };
-  const [user, setUser] = useState(data);
-  const [emotion, setEmotion] = useState();
-  const [src, setSrc] = useState();
+
+  console.log(userId);
   return (
     <>
       <Header />

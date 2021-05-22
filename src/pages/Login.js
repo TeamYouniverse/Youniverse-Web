@@ -1,3 +1,5 @@
+
+import axios from 'axios'
 import React, { useRef, useState } from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
@@ -7,18 +9,28 @@ import GlobalFonts from '../assets/fonts/font';
 const Login = ({ user, setUser }) => {
   const history = useHistory();
   const [userName, setUserName] = useState('');
+
+  const postAPI = async (p) => {
+    try {
+      const { data } = await axios.post(`/api/login`, {
+        userName: `${p}`,
+      });
+      console.log(data);
+      return data;
+    } catch (e) {
+      console.error('[FAIL] POST ANSWER', e);
+      return e;
+    }
+  };
+
   const ChangeHandler = (event) => {
     console.log('뭐가입력됏닝', event.target.value);
     setUserName(event.target.value);
   };
-  const inputRef = useRef();
-  const onSubmitHandler = (event) => {
+  const onSubmitHandler = async (event) => {
     event.preventDefault();
-    console.log(inputRef.current.value);
-    setUser({
-      ...user,
-      data: { ...user.data, username: inputRef.current.value },
-    });
+    const data = await postAPI(userName);
+    setUserId(data.username);
     history.push('/1');
   };
   return (

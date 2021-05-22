@@ -7,6 +7,7 @@ import Touching from '../assets/images/touching.svg';
 import Sorry from '../assets/images/sorry.svg';
 import mainPlanet from '../assets/images/Planet.svg';
 import { useHistory } from 'react-router';
+
 import GlobalFonts from '../assets/fonts/font';
 
 const MainPage = (user, setEmotion, setSrc) => {
@@ -14,13 +15,13 @@ const MainPage = (user, setEmotion, setSrc) => {
 
   // 서버로부터 받을 데이터 넣을 것이지만 임의로 넣어둠
   const name = user.user.data.username;
-
   const emotion = {
     happy: '행복',
     sad: '서운',
     sorry: '미안',
     touching: '감동',
   };
+
   const history = useHistory();
   // console.log(event.target.getAttribute('src'));
 
@@ -49,7 +50,9 @@ const MainPage = (user, setEmotion, setSrc) => {
     });
   };
   return (
+    //클릭했을 때 -> 그 행성의 사이트에 들어가 -.
     <MainWrap>
+
       <GlobalFonts />
       <div className="planet">
         <div className="planet--main">
@@ -100,6 +103,8 @@ const MainWrap = styled.div`
       margin-top: 10rem;
       &--planet {
         position: relative;
+        cursor: pointer;
+
       }
       &--userName {
         margin-top: 7rem;
@@ -121,21 +126,29 @@ const MainWrap = styled.div`
       position: absolute;
       top: -10rem;
       left: 60rem;
+      cursor: pointer;
+
     }
     &--sad {
       position: absolute;
       top: 40rem;
       left: 55rem;
+      cursor: pointer;
+
     }
     &--sorry {
       position: absolute;
       top: -10rem;
       left: -35rem;
+      cursor: pointer;
+
     }
     &--touching {
       position: absolute;
       top: 35rem;
       left: -25rem;
+      cursor: pointer;
+
     }
   }
 `;
