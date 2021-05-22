@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Login, Main, Emotion, Read, Write } from './pages';
-import { Header, Footer } from './components';
 
 function App() {
+  const [userId, setUserId] = useState();
+  console.log(userId);
   return (
     <>
-      <Header />
       <Router>
         <Switch>
-          <Route exact path="/" component={Login} />
+          <Route
+            exact
+            path="/"
+            render={() => <Login setUserId={setUserId} />}
+          />
           <Route path="/:id" component={Main} />
           <Route
             path="/:id/happy"
@@ -23,7 +27,6 @@ function App() {
           <Route path="/">404 not Found</Route>
         </Switch>
       </Router>
-      <Footer />
     </>
   );
 }
