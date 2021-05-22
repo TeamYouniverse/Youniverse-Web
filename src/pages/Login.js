@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
+import GlobalFonts from '../assets/fonts/font';
 
 // App.js에서 setUserId 값을 받아와서 input에서 받아온 값으로 그 값 저장
 const Login = ({ user, setUser }) => {
@@ -22,6 +23,7 @@ const Login = ({ user, setUser }) => {
   };
   return (
     <LoginWrap>
+      <GlobalFonts />
       <div className="title">
         나와 너의 감정 공유의 시간을 행성에 기록하다, Youniverse
       </div>
@@ -52,6 +54,7 @@ const Login = ({ user, setUser }) => {
 export default Login;
 
 const LoginWrap = styled.div`
+  font-family: Noto Sans CJK KR;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -59,7 +62,7 @@ const LoginWrap = styled.div`
   align-items: center;
   justify-content: center;
   .title {
-    margin-top: 12rem;
+    margin-top: 17.5rem;
     margin-bottom: 8.6rem;
     font-family: Noto Sans CJK KR;
     font-size: 2rem;
@@ -112,7 +115,7 @@ const LoginWrap = styled.div`
     border: 0.1rem solid #ffffff;
     box-sizing: border-box;
     border-radius: 3.05rem;
-    font-family: Roboto;
+    font-family: Noto Sans CJK KR;
     font-style: normal;
     font-weight: normal;
     font-size: 2rem;

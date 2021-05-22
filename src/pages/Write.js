@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router';
 import styled from 'styled-components';
+import GlobalFonts from '../assets/fonts/font';
 
 const Write = () => {
   const location = useLocation();
@@ -25,6 +26,7 @@ const Write = () => {
   };
   return (
     <WriteWrap>
+      <GlobalFonts />
       <p className="description">
         "{letter.name}님과의 [{letter.category}] 관련 기억을 떠올려보세요."
       </p>
@@ -59,6 +61,7 @@ const Write = () => {
 export default Write;
 
 const WriteWrap = styled.div`
+  font-family: Noto Sans CJK KR;
   display: flex;
   flex-direction: column;
   align-items: center;

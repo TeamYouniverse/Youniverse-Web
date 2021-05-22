@@ -7,6 +7,7 @@ import Touching from '../assets/images/touching.svg';
 import Sorry from '../assets/images/sorry.svg';
 import mainPlanet from '../assets/images/Planet.svg';
 import { useHistory } from 'react-router';
+import GlobalFonts from '../assets/fonts/font';
 
 const MainPage = (user, setEmotion, setSrc) => {
   console.log(user.user.data.username);
@@ -49,6 +50,7 @@ const MainPage = (user, setEmotion, setSrc) => {
   };
   return (
     <MainWrap>
+      <GlobalFonts />
       <div className="planet">
         <div className="planet--main">
           <div className="planet--main--userName">{name}</div>
@@ -84,6 +86,7 @@ const MainPage = (user, setEmotion, setSrc) => {
 export default MainPage;
 
 const MainWrap = styled.div`
+  font-family: Noto Sans CJK KR;
   .planet {
     display: flex;
     flex-direction: column;

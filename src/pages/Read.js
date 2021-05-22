@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import icStar from '../assets/icons/star.svg';
+import GlobalFonts from '../assets/fonts/font';
 
 const Read = () => {
   // 기록된 내용을 넣을 변수 선언
@@ -12,6 +13,7 @@ const Read = () => {
   // }
   return (
     <ReadWrap>
+      <GlobalFonts />
       <img className="star" src={icStar} alt=""></img>
       <div className="content">
         <p className="content__letter">{letter}</p>
@@ -26,6 +28,7 @@ const Read = () => {
 export default Read;
 
 const ReadWrap = styled.div`
+  font-family: Noto Sans CJK KR;
   display: flex;
   flex-direction: column;
   align-items: center;

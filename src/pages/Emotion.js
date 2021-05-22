@@ -3,6 +3,7 @@ import { useHistory, useLocation } from 'react-router';
 import styled from 'styled-components';
 import { Example, Star, happy, sad, sorry, touching } from '../assets';
 import { Planet } from '../components';
+import GlobalFonts from '../assets/fonts/font';
 
 const Emotion = ({ user }) => {
   const location = useLocation();
@@ -121,6 +122,7 @@ const Emotion = ({ user }) => {
 
   return (
     <EmotionWrap>
+      <GlobalFonts />
       <div className="emotionContainer">
         <div onClick={handleClick}>
           <Planet src={src} name={emotionKorName} size="large" />
@@ -155,6 +157,7 @@ const Emotion = ({ user }) => {
 export default Emotion;
 
 const EmotionWrap = styled.div`
+  font-family: Noto Sans CJK KR;
   height: 100%;
   /* width: 100%; */
   display: flex;
