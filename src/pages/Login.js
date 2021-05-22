@@ -1,16 +1,33 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
 // App.js에서 setUserId 값을 받아와서 input에서 받아온 값으로 그 값 저장
 const Login = ({ setUserId }) => {
   const [userName, setUserName] = useState('');
+
+  const postAPI = async (p) => {
+    try {
+      const { data } = await axios.post(`/api/login`, {
+        userName: `${p}`,
+      });
+      console.log(data);
+      return data;
+    } catch (e) {
+      console.error('[FAIL] POST ANSWER', e);
+      return e;
+    }
+  };
+
   const ChangeHandler = (event) => {
     console.log('뭐가입력됏닝', event.target.value);
     setUserName(event.target.value);
   };
-  const onSubmitHandler = (event) => {
+  const onSubmitHandler = async (event) => {
     event.preventDefault();
-    setUserId(userName);
+    const data = await postAPI(userName);
+    setUserId(data.username);
+    history.push('/1');
   };
   return (
     <LoginWrap>
