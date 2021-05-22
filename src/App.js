@@ -1,7 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { MainPage } from "./pages";
-import { Header, Footer } from "./components";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { MainPage } from './pages';
+import { Header, Footer } from './components';
 
 function App() {
   return (
