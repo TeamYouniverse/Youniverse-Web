@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
+import { useHistory } from 'react-router';
 import styled from 'styled-components';
-import { Example } from '../assets';
+import { Example, Star } from '../assets';
 import { Planet } from '../components';
 
-const Emotion = () => {
+const Emotion = ({ emotion }) => {
+  const history = useHistory();
   const [ids, setIds] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   const [title, setTitle] = useState([
     '김의진1',
@@ -17,8 +19,8 @@ const Emotion = () => {
     '충전기9',
     '에어팟10',
   ]);
-  const spanRef = useRef();
-  // 글자가 안 보이다가 hover 시, 보이도록 만들고 싶다...
+  const [content, setContent] = useState([]);
+
   const handleMouseUp = (e) => {
     e.target.parentNode.childNodes[0].tagName === 'SPAN'
       ? (e.target.parentNode.childNodes[0].style.opacity = '1')
@@ -33,20 +35,23 @@ const Emotion = () => {
       ? (e.target.parentNode.parentNode.childNodes[0].style.opacity = '0')
       : null;
   };
+  const handleClick = () => {
+    history.push('/1/happy/write');
+  };
 
   return (
     <EmotionWrap>
-      <Planet src={Example} name="행복" size="large" />
+      <div onClick={handleClick}>
+        <Planet src={Example} name="행복" size="large" />
+      </div>
       {ids.map((id, index) => (
         <div key={id} className="small">
-          <span ref={spanRef} className="title">
-            {title[index]}
-          </span>
+          <span className="title">{title[index]}</span>
           <div
             onMouseEnter={(e) => handleMouseUp(e)}
             onMouseLeave={handleMouseLeave}
           >
-            <Planet src={Example} name="" size="tiny" />
+            <Planet src={Star} name="" size="small" />
           </div>
         </div>
       ))}
