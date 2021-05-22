@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import { Example, Star } from '../assets';
 import { Planet } from '../components';
+import GlobalFonts from '../assets/fonts/font';
 
 const Emotion = ({ emotion }) => {
   const history = useHistory();
@@ -41,6 +42,7 @@ const Emotion = ({ emotion }) => {
 
   return (
     <EmotionWrap>
+      <GlobalFonts />
       <div onClick={handleClick}>
         <Planet src={Example} name="행복" size="large" />
       </div>
@@ -66,6 +68,7 @@ const Emotion = ({ emotion }) => {
 export default Emotion;
 
 const EmotionWrap = styled.div`
+  font-family: Noto Sans CJK KR;
   height: 100%;
   display: flex;
   flex-direction: column;
