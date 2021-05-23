@@ -1,4 +1,6 @@
-# SOPKATHON-Web
+# Youniverse-Web  
+
+<br />
 
 ### 🌟 Youniverse
 <img src="https://user-images.githubusercontent.com/71601985/119239653-80bf5780-bb85-11eb-800f-d33288394cbe.png" width=25%>
@@ -87,7 +89,7 @@
 | 사진 |<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6342bdba-6db4-4085-a907-2798686c0485/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210522T161653Z&X-Amz-Expires=86400&X-Amz-Signature=a5698614561f167515e1277049cac2f4ebdc64a184065d8dc92bc924e4108a1d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" width=200>|<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8e7f2a4e-248b-43fc-b021-9473cfc2d6da/shareImage_1617585084.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210522T161219Z&X-Amz-Expires=86400&X-Amz-Signature=62d0ee51b4ba37147668deebab63b5e033929820c8d49412a0195fcf2c9165f6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22shareImage_1617585084.jpg%22" width=200>|<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/35b6b531-b97c-4bd3-921f-ef243ad10931/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210522T162245Z&X-Amz-Expires=86400&X-Amz-Signature=66db4d4b7361738cba1f873992ced4d62b4183b226e9722932c90909f848adab&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" width=200>|
 |:---:|:---:|:---:|:---:|
 | 이름 |김의진|박나희|이다은|
-| 맡은 뷰 |User_space_emotion|Landingpage<br/>User_space|Write_emotion<br/>Check_emotion|
+| 맡은 뷰 |User_space_emotion|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Landingpage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>User_space|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write_emotion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>Check_emotion|
 | 맡은 역할 |초기 세팅|서버 연결 선생님|리드(미) 개발자|
   
 <br/>
