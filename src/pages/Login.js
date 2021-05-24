@@ -1,36 +1,21 @@
-
-import axios from 'axios'
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import GlobalFonts from '../assets/fonts/font';
 
 // App.js에서 setUserId 값을 받아와서 input에서 받아온 값으로 그 값 저장
-const Login = ({ user, setUser }) => {
+const Login = ({ postData }) => {
   const history = useHistory();
-  const [userName, setUserName] = useState('');
-
-  const postAPI = async (p) => {
-    try {
-      const { data } = await axios.post(`/api/login`, {
-        userName: `${p}`,
-      });
-      console.log(data);
-      return data;
-    } catch (e) {
-      console.error('[FAIL] POST ANSWER', e);
-      return e;
-    }
-  };
+  const [userNameInput, setUserNameInput] = useState('');
 
   const ChangeHandler = (event) => {
-    console.log('뭐가입력됏닝', event.target.value);
-    setUserName(event.target.value);
+    setUserNameInput(event.target.value);
   };
-  const onSubmitHandler = async (event) => {
+  const onSubmitHandler = (event) => {
     event.preventDefault();
-    const data = await postAPI(userName);
-    setUserId(data.username);
+    //엔터칠 때의 값을 postData로 보냄
+    postData(userNameInput);
+    console.log('뭐가입력됏닝', userNameInput);
     history.push('/1');
   };
   return (
@@ -50,9 +35,8 @@ const Login = ({ user, setUser }) => {
         <input
           className="name-input"
           type="text"
-          value={userName}
+          value={userNameInput}
           onChange={ChangeHandler}
-          ref={inputRef}
         ></input>
       </form>
       <div className="button" onClick={(event) => onSubmitHandler(event)}>
@@ -67,14 +51,12 @@ export default Login;
 
 const LoginWrap = styled.div`
   font-family: Noto Sans CJK KR;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   .title {
-    margin-top: 17.5rem;
+    margin-top: 5.4rem;
     margin-bottom: 8.6rem;
     font-family: Noto Sans CJK KR;
     font-size: 2rem;
