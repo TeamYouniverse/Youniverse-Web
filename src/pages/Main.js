@@ -10,11 +10,11 @@ import { useHistory } from 'react-router';
 
 import GlobalFonts from '../assets/fonts/font';
 
-const MainPage = (user, setEmotion, setSrc) => {
-  console.log(user.user.data.username);
+const MainPage = (userData) => {
+  console.log(userData);
 
   // 서버로부터 받을 데이터 넣을 것이지만 임의로 넣어둠
-  const name = user.user.data.username;
+  const name = userData.username;
   const emotion = {
     happy: '행복',
     sad: '서운',
@@ -27,32 +27,31 @@ const MainPage = (user, setEmotion, setSrc) => {
 
   const handleHappy = (event) => {
     history.push({
-      pathname: '/1/happy',
+      pathname: '/happy',
       state: { name },
     });
   };
   const handleSad = (event) => {
     history.push({
-      pathname: '/1/sad',
+      pathname: '/sad',
       state: { name },
     });
   };
   const handleTouching = (event) => {
     history.push({
-      pathname: '/1/touching',
+      pathname: '/touching',
       state: { name },
     });
   };
   const handleSorry = (event) => {
     history.push({
-      pathname: '/1/sorry',
+      pathname: '/sorry',
       state: { name },
     });
   };
   return (
     //클릭했을 때 -> 그 행성의 사이트에 들어가 -.
     <MainWrap>
-
       <GlobalFonts />
       <div className="planet">
         <div className="planet--main">
@@ -104,7 +103,6 @@ const MainWrap = styled.div`
       &--planet {
         position: relative;
         cursor: pointer;
-
       }
       &--userName {
         margin-top: 7rem;
@@ -127,28 +125,24 @@ const MainWrap = styled.div`
       top: -10rem;
       left: 60rem;
       cursor: pointer;
-
     }
     &--sad {
       position: absolute;
       top: 40rem;
       left: 55rem;
       cursor: pointer;
-
     }
     &--sorry {
       position: absolute;
       top: -10rem;
       left: -35rem;
       cursor: pointer;
-
     }
     &--touching {
       position: absolute;
       top: 35rem;
       left: -25rem;
       cursor: pointer;
-
     }
   }
 `;
