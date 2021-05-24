@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router';
 import styled from 'styled-components';
+import GlobalFonts from '../assets/fonts/font';
 
 const Write = () => {
+  const location = useLocation();
+  console.log(location.state);
   const [letter, setLetter] = useState({
-    name: `다나`,
-    category: `행복`,
+    name: location.state.name,
+    category: location.state.emotionKorName,
     title: ``,
     letter: ``,
   });
@@ -22,8 +26,9 @@ const Write = () => {
   };
   return (
     <WriteWrap>
+      <GlobalFonts />
       <p className="description">
-        "{letter.name}님과의 {letter.category}한 기억을 떠올려보세요."
+        "{letter.name}님과의 [{letter.category}] 관련 기억을 떠올려보세요."
       </p>
       <div className="content">
         <div className="content__title">
@@ -56,6 +61,7 @@ const Write = () => {
 export default Write;
 
 const WriteWrap = styled.div`
+  font-family: Noto Sans CJK KR;
   display: flex;
   flex-direction: column;
   align-items: center;

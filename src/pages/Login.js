@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
+import GlobalFonts from '../assets/fonts/font';
 
 // App.js에서 setUserId 값을 받아와서 input에서 받아온 값으로 그 값 저장
-const Login = ({ setUserId }) => {
+const Login = ({ postData }) => {
   const history = useHistory();
-  const [userName, setUserName] = useState('');
+  const [userNameInput, setUserNameInput] = useState('');
+
   const ChangeHandler = (event) => {
-    console.log('뭐가입력됏닝', event.target.value);
-    setUserName(event.target.value);
+    setUserNameInput(event.target.value);
   };
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    setUserId(userName);
+    //엔터칠 때의 값을 postData로 보냄
+    postData(userNameInput);
+    console.log('뭐가입력됏닝', userNameInput);
     history.push('/1');
   };
   return (
     <LoginWrap>
+      <GlobalFonts />
       <div className="title">
         나와 너의 감정 공유의 시간을 행성에 기록하다, Youniverse
       </div>
@@ -31,7 +35,7 @@ const Login = ({ setUserId }) => {
         <input
           className="name-input"
           type="text"
-          value={userName}
+          value={userNameInput}
           onChange={ChangeHandler}
         ></input>
       </form>
@@ -46,8 +50,7 @@ const Login = ({ setUserId }) => {
 export default Login;
 
 const LoginWrap = styled.div`
-  width: 100vw;
-  height: 100vh;
+  font-family: Noto Sans CJK KR;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,7 +109,7 @@ const LoginWrap = styled.div`
     border: 0.1rem solid #ffffff;
     box-sizing: border-box;
     border-radius: 3.05rem;
-    font-family: Roboto;
+    font-family: Noto Sans CJK KR;
     font-style: normal;
     font-weight: normal;
     font-size: 2rem;

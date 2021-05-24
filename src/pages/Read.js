@@ -1,12 +1,19 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import icStar from '../assets/icons/star.svg';
+import GlobalFonts from '../assets/fonts/font';
 
 const Read = () => {
   // 기록된 내용을 넣을 변수 선언
-  const letter = `여기에는 이제 다른 사람이 나한테 써준 내용이 들어오는 건데 그런 건데 여기에 뭘 써야 될지 모르겠어서 이렇게 주저리주저리 말이 많았네요.\n빠잉`;
+  const letter = `뒷풀이에서 처음 만났을 때 잘 챙겨준 거 너무 감동이었어요. 다 새로운 사람들이고 내성적인 성격이라 낯을 가리는데 이 분위기에 편하게 적응할 수 있도록 도와줬어요! 덕분에 원래보다 훨씬 빠르게 사람들과 가까워질 수 있었던 것 같아요ㅎㅎㅎ 소극적인 친구들까지 두루두루 챙기는 모습에 많이 감동받고 갑니다!!!`;
+  // const history = useHistory();
+  // const handleClick = () => {
+  //   history.push('/1/')
+  // }
   return (
     <ReadWrap>
+      <GlobalFonts />
       <img className="star" src={icStar} alt=""></img>
       <div className="content">
         <p className="content__letter">{letter}</p>
@@ -21,6 +28,7 @@ const Read = () => {
 export default Read;
 
 const ReadWrap = styled.div`
+  font-family: Noto Sans CJK KR;
   display: flex;
   flex-direction: column;
   align-items: center;
