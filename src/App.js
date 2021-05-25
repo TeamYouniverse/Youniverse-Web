@@ -37,9 +37,10 @@ function App() {
     }
   };
 
+  //paramId값이 정의되면 재렌더링해서 데이터 get 해옴
   useEffect(() => {
     getData(paramId);
-  }, []);
+  }, [paramId]);
 
   console.log(paramId);
 
