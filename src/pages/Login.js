@@ -2,12 +2,25 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import GlobalFonts from '../assets/fonts/font';
+import postAPI from '../lib/postApi';
 
 // App.js에서 setUserId 값을 받아와서 input에서 받아온 값으로 그 값 저장
-const Login = ({ postData }) => {
+const Login = ({ setParamId }) => {
   const history = useHistory();
   const [userNameInput, setUserNameInput] = useState('');
-
+  //post로 받은 데이터는 우선 userName이 들어온 이후 처리할 수 있으므로 비동기 처리, 들어오면 그 useName에 해당하는 데이터로 받은 Id 값(data)을 paramId로 설정해줌
+  const postData = async (userName) => {
+    try {
+      const data = await postAPI(userName);
+      console.log(data);
+      if (data === null) throw Error;
+      setParamId(data);
+      history.push(`/${data.id}`);
+    } catch (e) {
+      console.log(e);
+      history.push('/1');
+    }
+  };
   const ChangeHandler = (event) => {
     setUserNameInput(event.target.value);
   };
@@ -16,7 +29,6 @@ const Login = ({ postData }) => {
     //엔터칠 때의 값을 postData로 보냄
     postData(userNameInput);
     console.log('뭐가입력됏닝', userNameInput);
-    history.push('/1');
   };
   return (
     <LoginWrap>
