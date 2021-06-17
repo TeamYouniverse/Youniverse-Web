@@ -10,24 +10,11 @@ function App() {
     status: 'idle',
     data: null,
   });
-
-  // //post로 받은 데이터는 우선 userName이 들어온 이후 처리할 수 있으므로 비동기 처리, 들어오면 그 useName에 해당하는 데이터로 받은 Id 값(data)을 paramId로 설정해줌
-  // const postData = async (userName) => {
-  //   try {
-  //     const data = await postAPI(userName);
-  //     console.log(data);
-  //     if (data === null) throw Error;
-  //     setParamId(data.id);
-  //     history.push(`/${paramId}`);
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // };
-
+  console.log(paramId);
   //post로 받은 paramId값을 보내서 userData 받음
   const getData = async (paramId) => {
     try {
-      const data = await getApi(paramId);
+      const data = await getApi.getApi(paramId);
       if (data === null) throw Error;
       setUserData({ status: 'resolved', data: data });
     } catch (e) {

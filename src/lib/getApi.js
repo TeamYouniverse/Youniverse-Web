@@ -6,7 +6,11 @@ const getApi = async (paramId) => {
     'http://ec2-3-37-72-139.ap-northeast-2.compute.amazonaws.com:5000/api/login';
   //axios.get을 이용해 url에 존제하는 자원을 요청
   try {
-    const data = await axios.get(`${url}` + paramId);
+    const data = await axios.get(`${url}`, {
+      params: {
+        id: `${paramId}`,
+      },
+    });
     console.log('[SUCCESS] GET user data', data);
     return data;
   } catch (e) {
