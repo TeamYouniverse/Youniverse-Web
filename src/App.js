@@ -5,7 +5,7 @@ import { Login, Main, Emotion, Read, Write } from './pages';
 import getApi from '../src/lib/getApi';
 
 function App() {
-  const [paramId, setParamId] = useState('오하');
+  const [paramId, setParamId] = useState('60a945e8d51f5f03a690ca34');
   const [userData, setUserData] = useState({
     status: 'idle',
     data: null,
