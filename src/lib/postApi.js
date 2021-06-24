@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //userName을 받으면 poastApi(userName);을 실행시켜서 post를 시킴
 const url =
-  'http://ec2-3-37-72-139.ap-northeast-2.compute.amazonaws.com:5000/api/login/';
+  'http://cors-anywhere.herokuapp.com/http://ec2-3-37-72-139.ap-northeast-2.compute.amazonaws.com:5000/api/login/';
 
 const postAPI = async (userName) => {
   try {
